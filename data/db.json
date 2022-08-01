@@ -1,0 +1,24 @@
+{
+  "contacts": [
+    {
+      "id": 1,
+      "name": "Some One",
+      "email": "Jayne_Kuhic@sydney.com"
+    },
+    {
+      "id": 2,
+      "name": "Good Contact",
+      "email": "Nikita@garfield.biz"
+    },
+    {
+      "id": 3,
+      "name": "anynomus name",
+      "email": "Lew@alysha.tv"
+    },
+    {
+      "id": 4,
+      "name": "company manger",
+      "email": "boss@bussinesss.com"
+    }
+  ]
+}

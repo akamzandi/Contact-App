@@ -9,7 +9,7 @@ const AddForm = ({ newContact, submitHandler, inputChangeHandler }) => {
           <p>Name</p>
           <input
             type="text"
-            placeholder="Enter a Name"
+            placeholder="Enter a name"
             name="name"
             value={newContact.name}
             onChange={(e) => inputChangeHandler(e)}
@@ -19,7 +19,7 @@ const AddForm = ({ newContact, submitHandler, inputChangeHandler }) => {
           <p>Email</p>
           <input
             type="text"
-            placeholder="Enter an Email"
+            placeholder="Enter an email"
             name="email"
             value={newContact.email}
             onChange={(e) => inputChangeHandler(e)}
