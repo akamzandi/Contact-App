@@ -1,6 +1,6 @@
-import Contact from "./Contact";
+import Contact from "../Components/Contact";
 
-const ContactList = ({ contacts, deletContactHandler }) => {
+const ContactsListPage = ({ contacts, deletContactHandler }) => {
   const renderContacts = () => {
     if (contacts) {
       return contacts.map((contact) => (
@@ -31,4 +31,4 @@ const ContactList = ({ contacts, deletContactHandler }) => {
   );
 };
 
-export default ContactList;
+export default ContactsListPage;

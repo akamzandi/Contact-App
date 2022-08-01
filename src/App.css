@@ -1,9 +1,25 @@
 header {
   border-bottom: solid black 2px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   padding: 15px 0;
-  color: darkblue;
+}
+
+header h2 {
+  border-bottom: solid black 2px;
+  /* color: darkblue; */
+}
+
+header nav {
+  padding-top: 15px;
+  display: flex;
+  width: 500px;
+  justify-content: space-around;
+}
+
+header a {
+  text-decoration: none;
 }
 
 .form-container {
@@ -105,4 +121,9 @@ button {
 
 .contact-email {
   color: rgb(95, 95, 248);
+}
+
+.active-link {
+  color: brown;
+  border-bottom: 1px dotted brown;
 }

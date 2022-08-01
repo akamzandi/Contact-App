@@ -1,9 +1,11 @@
 import "./App.css";
-import Header from "./Components/Header";
-import AddForm from "./Components/AddForm";
-import ContactList from "./Components/ContactList";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Routes, Route } from "react-router-dom";
+import ContactsListPage from "./Pages/ContactsListPage";
+import SharedLayout from "./Components/SharedLayout";
+import AddContactPage from "./Pages/AddContactPage";
+// import ContactsListPage from "./Pages/ContactsListPage";
 
 function App() {
   // const [contacts, setContacts] = useState([
@@ -32,18 +34,14 @@ function App() {
 
   const submitHandler = (e) => {
     e.preventDefault();
+    alert("Contact Created!");
     createOneContact();
     getAllContacts();
-
-    // setContacts(contacts ? [...contacts, newContact] : [newContact]);
   };
 
   const deletContactHandler = (id) => {
     deleteOneContact(id);
     getAllContacts();
-
-    // const filteredContacts = contacts.filter((item) => item.id != id);
-    // setContacts(filteredContacts);
   };
 
   // to curectly update two related state
@@ -94,16 +92,29 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
-      <AddForm
-        submitHandler={submitHandler}
-        inputChangeHandler={inputChangeHandler}
-        newContact={newContact}
-      />
-      <ContactList
-        contacts={contacts}
-        deletContactHandler={deletContactHandler}
-      />
+      <Routes>
+        <Route path="/" element={<SharedLayout />}>
+          <Route
+            index
+            element={
+              <ContactsListPage
+                contacts={contacts}
+                deletContactHandler={deletContactHandler}
+              />
+            }
+          />
+          <Route
+            path="addContact"
+            element={
+              <AddContactPage
+                submitHandler={submitHandler}
+                inputChangeHandler={inputChangeHandler}
+                newContact={newContact}
+              />
+            }
+          />
+        </Route>
+      </Routes>
     </div>
   );
 }

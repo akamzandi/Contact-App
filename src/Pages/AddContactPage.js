@@ -1,6 +1,4 @@
-import { useState } from "react";
-
-const AddForm = ({ newContact, submitHandler, inputChangeHandler }) => {
+const AddContactPage = ({ newContact, submitHandler, inputChangeHandler }) => {
   return (
     <div className="form-container">
       <h3>Add New Contact</h3>
@@ -33,4 +31,4 @@ const AddForm = ({ newContact, submitHandler, inputChangeHandler }) => {
   );
 };
 
-export default AddForm;
+export default AddContactPage;
