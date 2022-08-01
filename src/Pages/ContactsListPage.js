@@ -1,6 +1,10 @@
 import Contact from "../Components/Contact";
 
-const ContactsListPage = ({ contacts, deletContactHandler }) => {
+const ContactsListPage = ({
+  contacts,
+  deletContactHandler,
+  editContactHandler,
+}) => {
   const renderContacts = () => {
     if (contacts) {
       return contacts.map((contact) => (
@@ -10,6 +14,7 @@ const ContactsListPage = ({ contacts, deletContactHandler }) => {
           email={contact.email}
           id={contact.id}
           deletContactHandler={deletContactHandler}
+          editContactHandler={editContactHandler}
         />
       ));
     } else {

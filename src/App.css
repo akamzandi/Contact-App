@@ -6,10 +6,10 @@ header {
   padding: 15px 0;
 }
 
-header h2 {
-  border-bottom: solid black 2px;
-  /* color: darkblue; */
-}
+/* header h2 {
+  border-bottom: solid black 2px; 
+  color: darkblue;
+} */
 
 header nav {
   padding-top: 15px;
@@ -20,6 +20,11 @@ header nav {
 
 header a {
   text-decoration: none;
+  color: darkblue;
+}
+
+h3 {
+  color: darkorange;
 }
 
 .form-container {
@@ -77,8 +82,15 @@ button {
 
 .remove-button {
   background-color: white;
-  color: rgb(192, 3, 3);
-  border: 1px solid darkred;
+  color: red;
+  border: 1px solid red;
+  margin-left: 5px;
+}
+
+.edit-button {
+  background-color: white;
+  color: darkblue;
+  border: 1px solid darkblue;
 }
 
 .contactList-container {
@@ -120,10 +132,16 @@ button {
 }
 
 .contact-email {
-  color: rgb(95, 95, 248);
+  color: black;
 }
 
 .active-link {
-  color: brown;
-  border-bottom: 1px dotted brown;
+  color: darkblue;
+  border-bottom: 1px solid darkorange;
+  padding-bottom: 5px;
+}
+
+.contactList-link {
+  text-decoration: line-through;
+  color: rgb(148, 147, 147);
 }

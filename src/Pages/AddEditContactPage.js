@@ -1,8 +1,6 @@
-import { useEffect } from "react";
-
-const AddContactPage = ({
+const AddEditContactPage = ({
   editMode,
-  newContact,
+  forSubmitContact,
   submitHandler,
   inputChangeHandler,
 }) => {
@@ -16,7 +14,7 @@ const AddContactPage = ({
             type="text"
             placeholder="Enter a name"
             name="name"
-            value={newContact.name}
+            value={forSubmitContact.name}
             onChange={(e) => inputChangeHandler(e)}
           />
         </section>
@@ -26,16 +24,16 @@ const AddContactPage = ({
             type="text"
             placeholder="Enter an email"
             name="email"
-            value={newContact.email}
+            value={forSubmitContact.email}
             onChange={(e) => inputChangeHandler(e)}
           />
         </section>
         <button type="submit" className="add-button">
-          {editMode ? "Edit" : "Add"}
+          {editMode ? "Done" : "Add"}
         </button>
       </form>
     </div>
   );
 };
 
-export default AddContactPage;
+export default AddEditContactPage;

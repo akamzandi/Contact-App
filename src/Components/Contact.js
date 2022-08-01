@@ -1,4 +1,10 @@
-const Contact = ({ name, email, id, deletContactHandler }) => {
+const Contact = ({
+  name,
+  email,
+  id,
+  deletContactHandler,
+  editContactHandler,
+}) => {
   return (
     <div className="contact-element">
       <div className="contact-container">
@@ -8,9 +14,17 @@ const Contact = ({ name, email, id, deletContactHandler }) => {
           <p className="contact-email">{email}</p>
         </div>
       </div>
-      <button className="remove-button" onClick={() => deletContactHandler(id)}>
-        Delete
-      </button>
+      <div>
+        <button className="edit-button" onClick={() => editContactHandler(id)}>
+          Edit
+        </button>
+        <button
+          className="remove-button"
+          onClick={() => deletContactHandler(id)}
+        >
+          Delete
+        </button>
+      </div>
     </div>
   );
 };
