@@ -1,0 +1,108 @@
+header {
+  border-bottom: solid black 2px;
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  color: darkblue;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px 0;
+}
+
+form {
+  padding: 10px 0;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-section {
+  margin-bottom: 20px;
+}
+
+.input-section p {
+  margin-bottom: 6px;
+}
+
+.input-section input {
+  outline: none;
+  padding: 4px 6px;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  width: 300px;
+  color: rgb(59, 59, 59);
+}
+
+.input-section input:focus {
+  border: 2px solid rgb(2, 2, 214);
+}
+
+button {
+  outline: none;
+  padding: 6px 8px;
+  width: 60px;
+  height: 30px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.add-button {
+  border: 0px;
+  background-color: darkblue;
+  color: white;
+}
+
+.remove-button {
+  background-color: white;
+  color: rgb(192, 3, 3);
+  border: 1px solid darkred;
+}
+
+.contactList-container {
+  border-top: 1px solid rgb(104, 103, 103);
+  border-bottom: 1px solid rgb(104, 103, 103);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.contact-element {
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(145, 144, 144);
+  width: 500px;
+}
+
+.contact-container {
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-icon {
+  border: 1px solid darkblue;
+  margin-right: 10px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+.contact-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.contact-email {
+  color: rgb(95, 95, 248);
+}
