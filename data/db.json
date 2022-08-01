@@ -3,22 +3,60 @@
     {
       "id": "1",
       "name": "Some One",
-      "email": "Jayne_Kuhic@sydney.com"
+      "email": "Jayne_Kuhic@sydney.com",
+      "tags": [
+        "family",
+        "friend",
+        "work"
+      ]
     },
     {
       "id": "2",
       "name": "Good Contact",
-      "email": "Nikita@garfield.biz"
+      "email": "Nikita@garfield.biz",
+      "tags": [
+        "work",
+        "unknown"
+      ]
     },
     {
       "id": "3",
       "name": "anynomus name",
-      "email": "Lew@alysha.tv"
+      "email": "Lew@alysha.tv",
+      "tags": [
+        "friend",
+        "work"
+      ]
     },
     {
       "id": "4",
       "name": "company manger",
-      "email": "boss@bussinesss.com"
+      "email": "boss@bussinesss.com",
+      "tags": [
+        "family"
+      ]
+    }
+  ],
+  "tags": [
+    {
+      "id": "1",
+      "label": "family",
+      "color": "green"
+    },
+    {
+      "id": "2",
+      "label": "friend",
+      "color": "blue"
+    },
+    {
+      "id": "3",
+      "label": "unknown",
+      "color": "purple"
+    },
+    {
+      "id": "3BnhZ_wZ8j7VIZzHquwag",
+      "label": "work",
+      "color": "red"
     }
   ]
 }

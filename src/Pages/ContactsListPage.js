@@ -2,6 +2,7 @@ import Contact from "../Components/Contact";
 
 const ContactsListPage = ({
   contacts,
+  allTags,
   deletContactHandler,
   editContactHandler,
 }) => {
@@ -13,6 +14,8 @@ const ContactsListPage = ({
           name={contact.name}
           email={contact.email}
           id={contact.id}
+          allTags={allTags}
+          contacTtags={contact.tags}
           deletContactHandler={deletContactHandler}
           editContactHandler={editContactHandler}
         />

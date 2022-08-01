@@ -1,5 +1,6 @@
 header {
   border-bottom: solid black 2px;
+  background-color: rgb(236, 236, 236);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,6 +15,7 @@ header {
 header nav {
   padding-top: 15px;
   display: flex;
+  /* flex-wrap: wrap; */
   width: 500px;
   justify-content: space-around;
 }
@@ -44,16 +46,102 @@ form {
   align-items: center;
 }
 
-.input-section {
+.tagsPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.tagsPage h3 {
+  padding-bottom: 10px;
+}
+
+.tagsPage-container {
+  /* border: 5px green solid; */
+  padding: 5px;
+  width: 700px;
+  display: flex;
+  /* flex-wrap: wrap-reverse; */
+  justify-content: center;
+}
+
+.tagsPage-container form {
+  /* border: 1px solid purple; */
+  width: 200px;
+}
+
+.tag-color-pick {
+  /* margin-left: 50px; */
+  margin: 5px 0px 10px 60px;
+}
+
+.tag-color-pick p {
+  margin-bottom: 5px;
+}
+
+.sub-headline {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.tags-container {
+  /* border: 1px red solid; */
+  /* width: 400px; */
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tags-controlPanel {
+  border-left: 1px rgb(59, 59, 59) solid;
+  padding: 5px 5px 5px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 40px;
+}
+
+.tags-controlPanel button {
+  margin-top: 10px;
+}
+
+.tag-input-section {
+  margin-bottom: 10px;
+}
+
+.tag-input-section input {
+  margin-top: 5px;
+  outline: none;
+  padding: 4px 6px;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  width: 150px;
+  color: rgb(59, 59, 59);
+}
+
+.tag-input-section input:focus {
+  border: 2px solid rgb(2, 2, 214);
+}
+
+.tag-container {
+  border-bottom: 1px solid rgb(59, 59, 59);
+  width: 250px;
+  margin-bottom: 5px;
+  padding: 10px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-input-section {
   margin-bottom: 20px;
 }
 
-.input-section p {
-  margin-bottom: 6px;
-}
-
-.input-section input {
+.contact-input-section input {
   outline: none;
+  margin-top: 5px;
   padding: 4px 6px;
   border: 1px solid lightgray;
   border-radius: 3px;
@@ -61,8 +149,38 @@ form {
   color: rgb(59, 59, 59);
 }
 
-.input-section input:focus {
+.contact-input-section input:focus {
   border: 2px solid rgb(2, 2, 214);
+}
+
+.contact-tags-section {
+  /* border: 1px solid green; */
+  width: 310px;
+  padding: 10px 5px;
+}
+
+.contact-tags-section p {
+  margin-bottom: 10px;
+}
+
+.checkboxes-container {
+  border: 1px dotted rgb(104, 103, 103);
+  border-radius: 3px;
+  border-top: none;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.check-box-element {
+  margin-bottom: 10px;
+  /* border: 1px solid yellow; */
+}
+
+.check-box-element input[type="checkbox"] {
+  margin-right: 5px;
 }
 
 button {
@@ -74,7 +192,7 @@ button {
   cursor: pointer;
 }
 
-.add-button {
+.submit-button {
   border: 0px;
   background-color: darkblue;
   color: white;
@@ -93,6 +211,10 @@ button {
   border: 1px solid darkblue;
 }
 
+.addEdit-contact-btn {
+  margin-top: 10px;
+}
+
 .contactList-container {
   border-top: 1px solid rgb(104, 103, 103);
   border-bottom: 1px solid rgb(104, 103, 103);
@@ -103,19 +225,43 @@ button {
 }
 
 .contact-element {
+  /* border: 1px solid green; */
   margin-bottom: 10px;
   padding: 5px 10px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   border-bottom: 1px solid rgb(145, 144, 144);
   width: 500px;
 }
 
 .contact-container {
-  padding: 5px 10px;
+  /* border: 1px solid yellow; */
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 450px;
+  /* border-bottom: 1px dotted black; */
+}
+
+/* .contact-buttons {
+  
+} */
+
+.contact-info {
+  /* border: 1px solid orangered; */
   display: flex;
   align-items: center;
+  /* padding-bottom: 10px; */
+}
+
+.contact-tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5px;
+  /* border: 1px solid purple; */
+  border-top: 1px dotted black;
 }
 
 .contact-icon {

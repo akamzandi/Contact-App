@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom";
 import Header from "./Header";
 
-const SharedLayout = ({ editMode }) => {
+const SharedLayout = ({ editContactMode }) => {
   return (
     <>
-      <Header editMode={editMode} />
+      <Header editContactMode={editContactMode} />
       <Outlet />
     </>
   );
