@@ -1,6 +1,5 @@
 import "./App.css";
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import ContactsListPage from "./Pages/ContactsListPage";
 import SharedLayout from "./Components/SharedLayout";
@@ -9,13 +8,59 @@ import { nanoid } from "nanoid";
 import TagsPage from "./Pages/TagsPage";
 
 function App() {
-  const [contacts, setContacts] = useState(null);
+  const [contacts, setContacts] = useState([
+    {
+      id: "1",
+      name: "Some One",
+      email: "Jayne_Kuhic@sydney.com",
+      tags: ["family", "friend", "work"],
+    },
+    {
+      id: "2",
+      name: "Good Contact",
+      email: "Nikita@garfield.biz",
+      tags: ["work", "unknown"],
+    },
+    {
+      id: "3",
+      name: "anynomus name",
+      email: "Lew@alysha.tv",
+      tags: ["friend", "work"],
+    },
+    {
+      id: "4",
+      name: "company manger",
+      email: "boss@bussinesss.com",
+      tags: ["family"],
+    },
+  ]);
   const [editedContactId, setEditedContactId] = useState(null);
   const [editContactMode, setEditContactMode] = useState(false);
   const [forSubmitContact, setForSubmitContact] = useState();
   const [forSubmitContactTagsCheckboxes, setForSubmitContactTagsCheckboxes] =
     useState([]);
-  const [tags, setTags] = useState(null);
+  const [tags, setTags] = useState([
+    {
+      id: "1",
+      label: "family",
+      color: "green",
+    },
+    {
+      id: "2",
+      label: "friend",
+      color: "blue",
+    },
+    {
+      id: "3",
+      label: "unknown",
+      color: "purple",
+    },
+    {
+      id: "3BnhZ_wZ8j7VIZzHquwag",
+      label: "work",
+      color: "red",
+    },
+  ]);
   const [forSubmitTag, setForSubmitTag] = useState();
   const [editedTagId, setEditedTagId] = useState(null);
   const [editTagMode, setEditTagMode] = useState(false);
@@ -110,84 +155,58 @@ function App() {
     setEditTagMode(true);
   };
 
-  const getAllContacts = async () => {
-    try {
-      const { data } = await axios.get(`http://localhost:3001/contacts`);
-      // console.log(data);
-      setContacts(data);
-    } catch (error) {
-      console.log("get all contacts function - ", error);
-    }
+  const getAllContacts = () => {
+    const data = JSON.parse(localStorage.getItem("contacts"));
+    setContacts(data);
   };
 
-  const deleteOneContact = async (id) => {
-    try {
-      const contactDeletionResp = await axios.delete(
-        `http://localhost:3001/contacts/${id}`
-      );
-      // console.log(contactDeletionResp);
-    } catch (error) {
-      console.log("delete one contact function - ", error);
-    }
+  const deleteOneContact = (id) => {
+    const updatedContacts = contacts.filter((contact) => contact.id !== id);
+    localStorage.setItem("contacts", JSON.stringify(updatedContacts));
   };
 
-  const createOneContact = async (contact) => {
-    try {
-      const createContactResp = await axios.post(
-        `http://localhost:3001/contacts/`,
-        contact
-      );
-      // console.log(createContactResp);
-    } catch (error) {
-      console.log("create one contact function - ", error);
-    }
+  const createOneContact = (contact) => {
+    const updatedContacts = [...contacts, contact];
+    localStorage.setItem("contacts", JSON.stringify(updatedContacts));
   };
 
-  const editOneContact = async (id, contact) => {
-    try {
-      await axios.put(`http://localhost:3001/contacts/${id}`, contact);
-    } catch (error) {
-      console.log("edit one contact function - ", error);
-    }
+  const editOneContact = (id, contact) => {
+    const updatedContacts = contacts.map((c) => {
+      if (c.id === id) {
+        return contact;
+      } else {
+        return c;
+      }
+    });
+    localStorage.setItem("contacts", JSON.stringify(updatedContacts));
+    console.log("edit One Contact Function!");
   };
 
-  const getAllTags = async () => {
-    try {
-      const { data } = await axios.get(`http://localhost:3001/tags`);
-      setTags(data);
-    } catch (error) {
-      console.log("get all tags function - ", error);
-    }
+  const getAllTags = () => {
+    const data = JSON.parse(localStorage.getItem("tags"));
+    setTags(data);
   };
 
-  const createOneTag = async (tag) => {
-    try {
-      await axios.post(`http://localhost:3001/tags`, tag);
-    } catch (error) {
-      console.log("create one tag function - ", error);
-    }
+  const createOneTag = (tag) => {
+    const updatedTags = [...tags, tag];
+    localStorage.setItem("tags", JSON.stringify(updatedTags));
   };
 
-  const deleteOneTag = async (id) => {
-    try {
-      const deleteTagResp = await axios.delete(
-        `http://localhost:3001/tags/${id}`
-      );
-      // console.log(deleteTagResp);
-    } catch (error) {
-      console.log("delete one tag function - ", error);
-    }
+  const deleteOneTag = (id) => {
+    const updatedTags = tags.filter((tag) => tag.id !== id);
+    localStorage.setItem("tags", JSON.stringify(updatedTags));
   };
 
-  const editOneTag = async (id, tag) => {
-    try {
-      const editTagResp = await axios.put(
-        `http://localhost:3001/tags/${id}`,
-        tag
-      );
-    } catch (error) {
-      console.log("edit one tag function - ", error);
-    }
+  const editOneTag = (id, tag) => {
+    const updatedTags = tags.map((t) => {
+      if (t.id === id) {
+        return tag;
+      } else {
+        return t;
+      }
+    });
+    localStorage.setItem("tags", JSON.stringify(updatedTags));
+    console.log("edit One Contact Function!");
   };
 
   const getProperTags = () => {
@@ -265,6 +284,16 @@ function App() {
   }, [forSubmitContactTagsCheckboxes]);
 
   useEffect(() => {
+    // localStorage.setItem("contacts", JSON.stringify(contacts));
+    // localStorage.setItem("tags", JSON.stringify(tags));
+
+    if (
+      JSON.parse(localStorage.getItem("tags")) == null &&
+      JSON.parse(localStorage.getItem("contacts")) == null
+    ) {
+      localStorage.setItem("contacts", JSON.stringify(contacts));
+      localStorage.setItem("tags", JSON.stringify(tags));
+    }
     getAllContacts();
     getAllTags();
   }, []);
