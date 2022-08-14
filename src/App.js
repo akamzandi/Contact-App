@@ -3,9 +3,9 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 import { nanoid } from "nanoid";
 
 import SharedLayout from "./Components/SharedLayout/SharedLayout";
-import ContactsListPage from "./Pages/ContactsListPage";
-import AddEditContactPage from "./Pages/AddEditContactPage";
-import TagsPage from "./Pages/TagsPage";
+import ContactsListPage from "./Pages/ContactList/ContactsListPage";
+import AddEditContactPage from "./Pages/AddEditContact/AddEditContactPage";
+import TagsPage from "./Pages/Tags/TagsPage";
 import "./App.css";
 
 function App() {

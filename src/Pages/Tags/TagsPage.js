@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { ChromePicker } from "react-color";
-import Tag from "../Components/Tag";
+import Tag from "../../Components/Tag/Tag";
 
 const TagsPage = ({
   allTags,
