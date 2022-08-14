@@ -1,51 +1,57 @@
 .contact-element {
-  border: 2px dotted green;
+  border: 1px solid darkblue;
   border-radius: 10px;
   margin-bottom: 10px;
   /* padding: 5px 10px; */
-  padding: 5px 0px;
+  /* padding: 5px 0px; */
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid rgb(145, 144, 144);
-  min-height: 8rem;
-  /* width: 90%; */
+  /* border-bottom: 1px solid rgb(145, 144, 144); */
+  /* min-height: 8rem; */
+  height: 25vh;
+  width: 80%;
 }
 
 .contact-container {
-  border: 2px dotted brown;
+  /* border: 2px dotted brown; */
   /* padding: 10px 10px; */
   display: flex;
   flex-direction: column;
-  width: 450px;
+  height: 100%;
+  width: 80%;
   /* border-bottom: 1px dotted black; */
 }
 
 .contact-buttons {
-  border: 2px dotted blue;
+  border-left: 1px solid darkblue;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  min-height: 8rem;
+  height: 100%;
+  width: 20%;
 }
 
 .contact-info {
-  border: 2px dotted orangered;
-
+  /* border: 2px dotted orangered; */
   display: flex;
   align-items: center;
-  /* padding-bottom: 10px; */
+  /* padding: 0.7rem 0.9rem; */
+  padding: 1.2vw 2.2vw;
+  height: 25%;
+  /* padding: 10px 5px; */
 }
 
 .contact-tags {
   display: flex;
   flex-wrap: wrap;
   margin-top: 5px;
-  border: 2px dotted purple;
-
+  /* border: 2px dotted purple; */
   border-top: 1px dotted black;
+  height: 75%;
+  overflow: scroll;
 }
 
 .contact-icon {
