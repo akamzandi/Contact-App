@@ -37,7 +37,7 @@ const NavBar = ({ editContactMode }) => {
           >
             Tags
           </NavLink>
-          <NavLink
+          {/* <NavLink
             className={({ isActive }) => (isActive ? "active-link" : "")}
             to="tags"
           >
@@ -60,7 +60,7 @@ const NavBar = ({ editContactMode }) => {
             to="tags"
           >
             sdfkjsldfjsldfksldflsdlfjsdfsdflsdfsdlfl;sjdkflsdlfkljl
-          </NavLink>
+          </NavLink> */}
         </>
       );
     }
