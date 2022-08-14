@@ -60,22 +60,19 @@ const Contact = ({
             <p className="contact-email">{email}</p>
           </div>
         </div>
-        <div className="contact-buttons">
-          <button
-            className="edit-button"
-            onClick={() => editContactHandler(id)}
-          >
-            Edit
-          </button>
-          <button
-            className="remove-button"
-            onClick={() => deletContactHandler(id)}
-          >
-            Delete
-          </button>
-        </div>
+        <div className="contact-tags">{renderContactTags()}</div>
       </div>
-      <div className="contact-tags">{renderContactTags()}</div>
+      <div className="contact-buttons">
+        <button className="edit-button" onClick={() => editContactHandler(id)}>
+          Edit
+        </button>
+        <button
+          className="remove-button"
+          onClick={() => deletContactHandler(id)}
+        >
+          Delete
+        </button>
+      </div>
     </div>
   );
 };
