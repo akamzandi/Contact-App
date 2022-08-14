@@ -1,4 +1,5 @@
 import Contact from "../../Components/Contact/Contact";
+import "./contactsListPage.css";
 
 const ContactsListPage = ({
   contacts,
@@ -32,7 +33,7 @@ const ContactsListPage = ({
   };
 
   return (
-    <div className="contactList-container">
+    <div className="contactList-page">
       <h3>Contacts List</h3>
       {renderContacts()}
     </div>
