@@ -1,0 +1,19 @@
+.sharedLayout-header {
+  border-bottom: solid black 0.2em;
+  background-color: rgb(236, 236, 236);
+  /* padding: 15px 0; */
+  width: 100%;
+  height: 4em;
+  display: block;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.sharedLayout-body {
+  /* border: solid green 1px; */
+  background-color: yellow;
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+}

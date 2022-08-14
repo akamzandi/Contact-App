@@ -1,5 +1,7 @@
 import { NavLink } from "react-router-dom";
-const Header = ({ editContactMode }) => {
+import "./navBar.css";
+
+const NavBar = ({ editContactMode }) => {
   const renderProperLinks = () => {
     if (editContactMode) {
       return (
@@ -35,17 +37,36 @@ const Header = ({ editContactMode }) => {
           >
             Tags
           </NavLink>
+          <NavLink
+            className={({ isActive }) => (isActive ? "active-link" : "")}
+            to="tags"
+          >
+            Tags
+          </NavLink>
+          <NavLink
+            className={({ isActive }) => (isActive ? "active-link" : "")}
+            to="tags"
+          >
+            ********************************************************************************
+          </NavLink>
+          <NavLink
+            className={({ isActive }) => (isActive ? "active-link" : "")}
+            to="tags"
+          >
+            Tags
+          </NavLink>
+          <NavLink
+            className={({ isActive }) => (isActive ? "active-link" : "")}
+            to="tags"
+          >
+            sdfkjsldfjsldfksldflsdlfjsdfsdflsdfsdlfl;sjdkflsdlfkljl
+          </NavLink>
         </>
       );
     }
   };
 
-  return (
-    <header>
-      <h2 className="app-title">Contact Manager</h2>
-      <nav>{renderProperLinks()}</nav>
-    </header>
-  );
+  return <nav>{renderProperLinks()}</nav>;
 };
 
-export default Header;
+export default NavBar;

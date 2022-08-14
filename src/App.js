@@ -1,11 +1,12 @@
-import "./App.css";
 import { useEffect, useState } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
-import ContactsListPage from "./Pages/ContactsListPage";
-import SharedLayout from "./Components/SharedLayout";
-import AddEditContactPage from "./Pages/AddEditContactPage";
 import { nanoid } from "nanoid";
+
+import SharedLayout from "./Components/SharedLayout/SharedLayout";
+import ContactsListPage from "./Pages/ContactsListPage";
+import AddEditContactPage from "./Pages/AddEditContactPage";
 import TagsPage from "./Pages/TagsPage";
+import "./App.css";
 
 function App() {
   const [contacts, setContacts] = useState([

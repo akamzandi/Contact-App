@@ -1,4 +1,4 @@
-import Contact from "../Components/Contact";
+import Contact from "../Components/Contact/Contact";
 
 const ContactsListPage = ({
   contacts,

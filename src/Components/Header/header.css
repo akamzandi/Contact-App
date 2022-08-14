@@ -1,0 +1,14 @@
+header {
+  /* border: 1px solid red; */
+  /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 4em;
+}
+
+header h2 {
+  /* border: 1px solid blue; */
+  /* font-size: 1.8rem; */
+  text-align: center;
+}
