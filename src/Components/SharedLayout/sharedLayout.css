@@ -13,7 +13,7 @@
 
 .sharedLayout-body {
   /* border: solid green 1px; */
-  background-color: yellow;
+  background-color: #fff;
   width: 100%;
   /* min-height: 100vh; */
   display: flex;

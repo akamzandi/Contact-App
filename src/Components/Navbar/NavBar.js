@@ -21,33 +21,15 @@ const NavBar = ({ editContactMode }) => {
         <>
           <NavLink
             className={({ isActive }) => (isActive ? "active-link" : "")}
-            to="/"
-          >
-            Contacts List
-          </NavLink>
-          <NavLink
-            className={({ isActive }) => (isActive ? "active-link" : "")}
             to="addEditContact"
           >
             {editContactMode ? "Edit Contact" : "Add Contact"}
           </NavLink>
           <NavLink
             className={({ isActive }) => (isActive ? "active-link" : "")}
-            to="tags"
+            to="/"
           >
-            Tags
-          </NavLink>
-          {/* <NavLink
-            className={({ isActive }) => (isActive ? "active-link" : "")}
-            to="tags"
-          >
-            Tags
-          </NavLink>
-          <NavLink
-            className={({ isActive }) => (isActive ? "active-link" : "")}
-            to="tags"
-          >
-            ********************************************************************************
+            Contacts List
           </NavLink>
           <NavLink
             className={({ isActive }) => (isActive ? "active-link" : "")}
@@ -55,12 +37,6 @@ const NavBar = ({ editContactMode }) => {
           >
             Tags
           </NavLink>
-          <NavLink
-            className={({ isActive }) => (isActive ? "active-link" : "")}
-            to="tags"
-          >
-            sdfkjsldfjsldfksldflsdlfjsdfsdflsdfsdlfl;sjdkflsdlfkljl
-          </NavLink> */}
         </>
       );
     }
