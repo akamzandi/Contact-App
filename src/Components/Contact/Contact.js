@@ -11,18 +11,12 @@ const Contact = ({
 }) => {
   const renderValidTagStyle = (inputColor) => {
     return {
-      // width: "0.8rem",
-      // height: "0.8rem",
-      // borderRadius: "0.2rem",
-      // marginRight: "0.2rem",
       backgroundColor: inputColor,
     };
   };
 
   const renderUnvalidTagStyle = () => {
     return {
-      padding: "5px 10px",
-      margin: "5px",
       color: "gray",
       textDecoration: "line-through",
     };
