@@ -11,10 +11,10 @@ const Contact = ({
 }) => {
   const renderValidTagStyle = (inputColor) => {
     return {
-      width: "0.8rem",
-      height: "0.8rem",
-      borderRadius: "0.2rem",
-      marginRight: "0.2rem",
+      // width: "0.8rem",
+      // height: "0.8rem",
+      // borderRadius: "0.2rem",
+      // marginRight: "0.2rem",
       backgroundColor: inputColor,
     };
   };
@@ -42,8 +42,7 @@ const Contact = ({
       return (
         <>
           {contacTtags.map((tag) => (
-            <div className="tag-wrapper">
-              <div style={decideStyle(tag)} />
+            <div className="tag-wrapper" style={decideStyle(tag)}>
               <p key={tag}>{tag}</p>
             </div>
           ))}

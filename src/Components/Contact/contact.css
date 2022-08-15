@@ -10,7 +10,7 @@
   /* border-bottom: 1px solid rgb(145, 144, 144); */
   /* min-height: 8rem; */
   height: 25vh;
-  width: 80%;
+  width: 80vw;
 }
 
 .contact-container {
@@ -19,7 +19,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: 80%;
+  width: 64vw;
   /* border-bottom: 1px dotted black; */
 }
 
@@ -31,7 +31,7 @@
   justify-content: center;
   gap: 2vh;
   height: 100%;
-  width: 20%;
+  width: 16vw;
 }
 
 .contact-info {
@@ -47,13 +47,14 @@
 .contact-tags {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 5px;
+  gap: 1.5vw;
+  margin-top: 0.3rem;
   /* border: 2px dotted purple; */
   border-top: 1px dotted black;
   height: 75%;
   overflow: scroll;
   padding: 1.8vh 2.2vw;
-  width: 100%;
+  width: 59.6vw;
 }
 
 .contact-icon {
@@ -75,11 +76,14 @@
 
 .tag-wrapper {
   font-size: 0.8rem;
-  /* border: 1px solid green; */
+  border-radius: 0 0.5rem 0.5rem 0;
+  color: #fff;
   display: flex;
-  width: 30%;
-  height: 50%;
   justify-content: flex-start;
   align-items: center;
-  overflow-x: hidden;
+  width: 8vw;
+  height: 4vh;
+  /* overflow-x: hidden; */
+  /* overflow: hidden; */
+  padding: 0 1.5vw;
 }
