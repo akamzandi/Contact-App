@@ -13,8 +13,8 @@ nav {
   background-color: #fff;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.8em;
-  justify-content: space-around;
+  gap: 20vw;
+  justify-content: center;
   align-items: center;
   /* overflow: auto;
   white-space: nowrap; */
