@@ -46,29 +46,63 @@ const Contact = ({
   };
 
   return (
-    <div className="contact-element">
+    <>
+      {/* <div className="contact-element">
+        <div className="contact-container">
+          <div className="contact-info">
+            <div className="contact-icon" />
+            <div>
+              <p className="contact-name">{name}</p>
+              <p className="contact-email">{email}</p>
+            </div>
+          </div>
+          <div className="contact-tags">{renderContactTags()}</div>
+        </div>
+        <div className="contact-buttons">
+          <button
+            className="edit-button"
+            onClick={() => editContactHandler(id)}
+          >
+            Edit
+          </button>
+          <button
+            className="remove-button"
+            onClick={() => deletContactHandler(id)}
+          >
+            Delete
+          </button>
+        </div>
+      </div> */}
+
       <div className="contact-container">
-        <div className="contact-info">
-          <div className="contact-icon" />
-          <div>
-            <p className="contact-name">{name}</p>
-            <p className="contact-email">{email}</p>
+        <div className="contact-upper-side">
+          <div className="contact-info">
+            <div className="contact-icon" />
+            <div className="name-mail-container">
+              <p className="contact-name">{name}</p>
+              <p className="contact-email">{email}</p>
+            </div>
+          </div>
+          <div className="contact-buttons">
+            <button
+              className="edit-button"
+              onClick={() => editContactHandler(id)}
+            >
+              Edit
+            </button>
+            <button
+              className="remove-button"
+              onClick={() => deletContactHandler(id)}
+            >
+              Delete
+            </button>
           </div>
         </div>
-        <div className="contact-tags">{renderContactTags()}</div>
+        <div className="contact-lower-side">
+          <div className="contact-tags">{renderContactTags()}</div>
+        </div>
       </div>
-      <div className="contact-buttons">
-        <button className="edit-button" onClick={() => editContactHandler(id)}>
-          Edit
-        </button>
-        <button
-          className="remove-button"
-          onClick={() => deletContactHandler(id)}
-        >
-          Delete
-        </button>
-      </div>
-    </div>
+    </>
   );
 };
 
