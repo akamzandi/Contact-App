@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { ChromePicker } from "react-color";
+import { BlockPicker, BlockPickerProps } from "react-color";
 import Tag from "../../Components/Tag/Tag";
 import "../../Pages/Tags/tagsPage.css";
 
@@ -67,7 +67,9 @@ const TagsPage = ({
             </section>
             <div className="tag-color-pick">
               <p>Tag Color</p>
-              <ChromePicker
+              <BlockPicker
+                triangle="hide"
+                width="14rem"
                 color={forSubmitTag.color}
                 onChange={(color) => handleTagColorChange(color.hex)}
               />
