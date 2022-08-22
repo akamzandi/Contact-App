@@ -23,8 +23,6 @@
   top: 0;
 }
 
-/* Until Here is OK */
-
 .tagsPage-container {
   /* border: 1px solid red; */
   width: 100%;
@@ -60,4 +58,54 @@
   font-weight: bold;
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+/* Until Here is OK */
+
+.tagsPage-container form {
+  /* border: 1px solid purple; */
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding-left: 5rem; */
+}
+
+.tag-input-section,
+.tag-color-pick {
+  padding: 0.75rem 1rem;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tag-input-section {
+  /* border: 1px solid green; */
+}
+
+.tag-color-pick {
+  /* border: 1px solid pink; */
+}
+
+.tag-color-pick p {
+  margin-bottom: 0.5rem;
+}
+
+.tag-input-section input {
+  margin-top: 0.5rem;
+  outline: none;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  width: 13rem;
+  color: rgb(59, 59, 59);
+}
+
+.tag-input-section input:focus {
+  border: 2px solid darkblue;
+}
+
+.tags-controlPanel button {
+  margin-top: 1rem;
 }
