@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import "../AddEditContact/addEditContactPage.css";
 
 const AddEditContactPage = ({
   editContactMode,
@@ -40,7 +41,7 @@ const AddEditContactPage = ({
   };
 
   return (
-    <div className="form-container">
+    <div className="addEditContact-page">
       <h3>{editContactMode ? "Edit Contact" : "Add New Contact"}</h3>
       <form onSubmit={(e) => submitHandlerContact(e)}>
         <section className="contact-input-section">

@@ -1,0 +1,85 @@
+.addEditContact-page {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  margin-bottom: 8vh;
+}
+
+.addEditContact-page h3 {
+  font-size: 1.4rem;
+  /* border: 1px solid green; */
+  color: darkorange;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  text-align: center;
+  background-color: #fff;
+  padding: 0.5rem 0;
+  margin-bottom: 0.5rem;
+  z-index: 1;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Until here is OK */
+
+.addEditContact-page form {
+  /* border: 1px solid green; */
+  width: 80%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid darkblue;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.contact-input-section,
+.contact-tags-section {
+  width: 80%;
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-tags-section {
+  /* border: 1px solid orangered; */
+}
+
+.contact-input-section {
+  /* border: 1px solid purple; */
+}
+
+.contact-input-section input {
+  margin-top: 0.5rem;
+  outline: none;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  width: 13rem;
+  color: rgb(59, 59, 59);
+}
+
+.contact-input-section input:focus {
+  border: 2px solid darkblue;
+}
+
+.contact-input-section label {
+  color: red;
+  /* font-size: 1rem; */
+}
+
+.contact-tags-section p {
+  color: brown;
+  /* font-size: 1rem; */
+}
+
+.addEditContact-page button {
+  margin-top: 0.75rem;
+}

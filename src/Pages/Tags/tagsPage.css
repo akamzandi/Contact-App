@@ -49,6 +49,7 @@
   border: 1px solid darkblue;
   border-top: none;
   border-radius: 0 0 10px 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .sub-headline {
@@ -80,13 +81,13 @@
   align-items: center;
 }
 
-.tag-input-section {
-  /* border: 1px solid green; */
-}
+/* .tag-input-section {
+  border: 1px solid green;
+} */
 
-.tag-color-pick {
-  /* border: 1px solid pink; */
-}
+/* .tag-color-pick {
+  border: 1px solid pink;
+} */
 
 .tag-color-pick p {
   margin-bottom: 0.5rem;
