@@ -1,5 +1,5 @@
 .addEditContact-page {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,13 +23,13 @@
   top: 0;
 }
 
-/* Until here is OK */
-
 .addEditContact-page form {
   /* border: 1px solid green; */
   width: 80%;
-  padding: 0.75rem 1rem;
+  /* padding: 0.75rem 1rem; */
+  padding: 0.75rem 1rem 2rem 1rem;
   margin-bottom: 0.75rem;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,13 +48,17 @@
   align-items: center;
 }
 
-.contact-tags-section {
-  /* border: 1px solid orangered; */
-}
+/* .contact-input-section {
+  border: 1px solid red;
+} */
 
-.contact-input-section {
-  /* border: 1px solid purple; */
-}
+/* .name-section {
+  border: 1px solid purple;
+} */
+
+/* .contact-tags-section {
+  border: 1px solid orangered;
+} */
 
 .contact-input-section input {
   margin-top: 0.5rem;
@@ -62,7 +66,8 @@
   padding: 0.3rem 0.5rem;
   border: 1px solid lightgray;
   border-radius: 3px;
-  width: 13rem;
+  /* width: 13rem; */
+  width: 80%;
   color: rgb(59, 59, 59);
 }
 
@@ -70,16 +75,41 @@
   border: 2px solid darkblue;
 }
 
-.contact-input-section label {
+/* .contact-input-section label {
   color: red;
-  /* font-size: 1rem; */
-}
+  font-size: 1rem;
+} */
 
 .contact-tags-section p {
-  color: brown;
+  /* color: brown; */
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
   /* font-size: 1rem; */
 }
 
 .addEditContact-page button {
-  margin-top: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.checkboxes-container {
+  border: 1px dotted rgb(104, 103, 103);
+  /* width: 13rem; */
+  width: 80%;
+  border-radius: 3px;
+  border-top: none;
+  padding: 0.75rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.check-box-element {
+  margin-bottom: 1rem;
+  margin-right: 2rem;
+  /* border: 1px solid yellow; */
+}
+
+.check-box-element input[type="checkbox"] {
+  margin-right: 0.3rem;
 }

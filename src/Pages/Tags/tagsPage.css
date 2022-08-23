@@ -34,7 +34,7 @@
 .tags-container,
 .tags-controlPanel {
   width: 80%;
-  padding: 0.75rem 1rem;
+  /* padding: 0.75rem 1rem; */
   margin-bottom: 0.75rem;
   display: flex;
   flex-direction: column;
@@ -43,9 +43,11 @@
 
 .tags-container {
   border-bottom: 1px solid rgb(131, 130, 130);
+  padding: 0.75rem 1rem;
 }
 .tags-controlPanel {
   /* border: 1px solid brown; */
+  padding: 0.75rem 1rem 2rem 1rem;
   border: 1px solid darkblue;
   border-top: none;
   border-radius: 0 0 10px 10px;
@@ -60,8 +62,6 @@
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-
-/* Until Here is OK */
 
 .tagsPage-container form {
   /* border: 1px solid purple; */
@@ -99,7 +99,8 @@
   padding: 0.3rem 0.5rem;
   border: 1px solid lightgray;
   border-radius: 3px;
-  width: 13rem;
+  /* width: 13rem; */
+  width: 90%;
   color: rgb(59, 59, 59);
 }
 
@@ -108,5 +109,5 @@
 }
 
 .tags-controlPanel button {
-  margin-top: 0.5rem;
+  margin-top: 1.5rem;
 }

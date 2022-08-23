@@ -44,7 +44,7 @@ const AddEditContactPage = ({
     <div className="addEditContact-page">
       <h3>{editContactMode ? "Edit Contact" : "Add New Contact"}</h3>
       <form onSubmit={(e) => submitHandlerContact(e)}>
-        <section className="contact-input-section">
+        <section className="contact-input-section name-section">
           <label htmlFor="name">Name</label>
           <br />
           <input

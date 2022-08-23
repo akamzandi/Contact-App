@@ -69,7 +69,6 @@ const TagsPage = ({
               <p>Tag Color</p>
               <BlockPicker
                 triangle="hide"
-                width="14rem"
                 color={forSubmitTag.color}
                 onChange={(color) => handleTagColorChange(color.hex)}
               />
