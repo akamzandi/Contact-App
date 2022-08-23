@@ -1,3 +1,4 @@
+import { BiTrash, BiEditAlt } from "react-icons/bi";
 import "./contact.css";
 
 const Contact = ({
@@ -88,13 +89,13 @@ const Contact = ({
               className="edit-button"
               onClick={() => editContactHandler(id)}
             >
-              Edit
+              <BiEditAlt />
             </button>
             <button
               className="remove-button"
               onClick={() => deletContactHandler(id)}
             >
-              Delete
+              <BiTrash />
             </button>
           </div>
         </div>
