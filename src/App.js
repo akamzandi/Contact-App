@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import { nanoid } from "nanoid";
+import { toast } from "react-toastify";
 
 import SharedLayout from "./Components/SharedLayout/SharedLayout";
 import ContactsListPage from "./Pages/ContactList/ContactsListPage";
@@ -109,13 +110,15 @@ function App() {
       editOneContact(editedContactId, forSubmitContact);
       getAllContacts();
       setEditedContactId(null);
-      alert("Contact Edited!");
+      // alert("Contact Edited!");
+      toast.info("Contact Edited!");
       editContactModeNavigate("/");
       setEditContactMode(false);
     } else {
       createOneContact(forSubmitContact);
       getAllContacts();
-      alert("Contact Created!");
+      // alert("Contact Created!");
+      toast.info("Contact Created!");
     }
   };
 
@@ -125,19 +128,22 @@ function App() {
       editOneTag(editedTagId, forSubmitTag);
       getAllTags();
       setEditedTagId(null);
-      alert("Tag Edited!");
+      // alert("Tag Edited!");
+      toast.info("Tag Edited!");
       setEditTagMode(false);
     } else {
       createOneTag(forSubmitTag);
       getAllTags();
-      alert("Tag Created!");
+      // alert("Tag Created!");
+      toast.info("Tag Created!");
     }
   };
 
   const deletContactHandler = (id) => {
     deleteOneContact(id);
     getAllContacts();
-    alert("Contact Deleted!");
+    // alert("Contact Deleted!");
+    toast.info("Contact Deleted!");
   };
 
   const editContactHandler = (id) => {
@@ -148,7 +154,8 @@ function App() {
   const deleteTagHandler = (id) => {
     deleteOneTag(id);
     getAllTags();
-    alert("Tag Deleted!");
+    // alert("Tag Deleted!");
+    toast.info("Tag Deleted!");
   };
 
   const editTagHandler = (id) => {
