@@ -1,4 +1,4 @@
-import { BiTrash, BiEditAlt } from "react-icons/bi";
+import { BiTrash, BiEditAlt, BiUserCircle } from "react-icons/bi";
 import "./contact.css";
 
 const Contact = ({
@@ -78,7 +78,10 @@ const Contact = ({
       <div className="contact-container">
         <div className="contact-upper-side">
           <div className="contact-info">
-            <div className="contact-icon" />
+            {/* <div className="contact-icon" /> */}
+            <div className="contact-icon">
+              <BiUserCircle />
+            </div>
             <div className="name-mail-container">
               <p className="contact-name">{name}</p>
               <p className="contact-email">{email}</p>
