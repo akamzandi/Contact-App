@@ -1,3 +1,4 @@
+import { BiTrash, BiEditAlt } from "react-icons/bi";
 import "../../Components/Tag/tag.css";
 
 const Tag = ({ tag, deleteTagHandler, editTagHandler, id }) => {
@@ -17,10 +18,10 @@ const Tag = ({ tag, deleteTagHandler, editTagHandler, id }) => {
       </div>
       <div className="tag-buttons">
         <button className="edit-button" onClick={() => editTagHandler(id)}>
-          Edit
+          <BiEditAlt />
         </button>
         <button className="remove-button" onClick={() => deleteTagHandler(id)}>
-          Delete
+          <BiTrash />
         </button>
       </div>
     </div>
