@@ -23,7 +23,7 @@
   top: 0;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 850px) {
   .contactList-page {
     /* border: 1px solid red; */
     width: 60vw;

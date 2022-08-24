@@ -2,12 +2,23 @@
   border: 1px solid darkblue;
   border-radius: 10px;
   width: 90%;
+  max-height: 3rem;
   padding: 0.75rem 1rem;
   margin-bottom: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.tag-buttons {
+  /* border: 1px solid yellowgreen; */
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.3rem;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .tag-info-container {

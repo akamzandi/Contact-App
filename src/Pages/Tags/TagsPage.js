@@ -48,7 +48,9 @@ const TagsPage = ({
           {/* <p className="sub-headline">Tags List:</p> */}
           {renderTags()}
         </div>
-        <p className="sub-headline">{editTagMode ? "Edit Tag" : "Add Tag"}</p>
+        <p className="sub-headline addEdit-tag-headline">
+          {editTagMode ? "Edit Tag" : "Add Tag"}
+        </p>
         <div className="tags-controlPanel">
           {/* <p className="sub-headline">{editTagMode ? "Edit Tag" : "Add Tag"}</p> */}
           <form onSubmit={(e) => submitHandlerTag(e)}>

@@ -114,7 +114,7 @@
   margin-right: 0.3rem;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 850px) {
   .addEditContact-page {
     /* border: 1px solid red; */
     width: 60vw;
