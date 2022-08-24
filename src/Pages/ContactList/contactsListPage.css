@@ -23,6 +23,12 @@
   top: 0;
 }
 
+.no-contact-msg {
+  margin-top: 2rem;
+  color: red;
+  font-style: italic;
+}
+
 @media screen and (min-width: 850px) {
   .contactList-page {
     /* border: 1px solid red; */

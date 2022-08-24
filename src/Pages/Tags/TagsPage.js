@@ -20,7 +20,7 @@ const TagsPage = ({
   }, [editTagMode, allTags]);
 
   const renderTags = () => {
-    if (allTags) {
+    if (allTags != "") {
       return (
         <>
           {allTags.map((t) => (
@@ -35,7 +35,7 @@ const TagsPage = ({
         </>
       );
     } else {
-      return <p>Ther is no Tag!</p>;
+      return <p className="no-tag-msg">There Is No Tag!</p>;
     }
   };
 

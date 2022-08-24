@@ -8,7 +8,7 @@ const ContactsListPage = ({
   editContactHandler,
 }) => {
   const renderContacts = () => {
-    if (contacts) {
+    if (contacts != "") {
       return contacts.map((contact) => (
         <Contact
           key={contact.id}
@@ -22,13 +22,7 @@ const ContactsListPage = ({
         />
       ));
     } else {
-      return (
-        <div>
-          <p>
-            <b>There Is No Contact! </b> --- Try To Add Some.
-          </p>
-        </div>
-      );
+      return <p className="no-contact-msg">There Is No Contact!</p>;
     }
   };
 

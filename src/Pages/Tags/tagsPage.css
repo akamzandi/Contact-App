@@ -117,6 +117,11 @@
   margin-top: 1.5rem;
 }
 
+.no-tag-msg {
+  color: red;
+  font-style: italic;
+}
+
 @media screen and (min-width: 850px) {
   .tagsPage {
     /* border: 1px solid red; */
