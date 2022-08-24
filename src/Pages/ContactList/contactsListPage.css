@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   width: 100vw;
-  margin-bottom: 8vh;
+  margin-bottom: 3rem;
 }
 
 .contactList-page h3 {
@@ -28,13 +28,15 @@
     /* border: 1px solid red; */
     width: 60vw;
     align-self: flex-end;
+    margin-top: 5rem;
     /* padding-right: 15rem; */
     /* margin-right: 15rem; */
   }
 
   .contactList-page h3 {
-    width: 100vw;
-    align-self: flex-end;
+    display: none;
+    /* width: 100vw;
+    align-self: flex-end; */
     /* margin-right: 15rem; */
   }
 }

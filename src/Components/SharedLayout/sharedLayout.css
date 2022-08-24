@@ -1,9 +1,10 @@
 .sharedLayout-header {
-  border-bottom: solid black 0.2em;
+  border-bottom: solid black 0.2rem;
   background-color: rgb(236, 236, 236);
+  /* background-color: blue; */
   /* padding: 15px 0; */
   width: 100%;
-  height: 4em;
+  height: 4rem;
   display: block;
   /* position: -webkit-sticky;
   position: sticky;
@@ -19,4 +20,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media screen and (min-width: 750px) {
+  .sharedLayout-body {
+    /* border: 1px solid green; */
+    width: 80%;
+  }
 }
