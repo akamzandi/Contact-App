@@ -111,3 +111,16 @@
 .tags-controlPanel button {
   margin-top: 1.5rem;
 }
+
+@media screen and (min-width: 750px) {
+  .tagsPage {
+    /* border: 1px solid red; */
+    width: 60vw;
+    align-self: flex-end;
+  }
+
+  .tagsPage h3 {
+    width: 100vw;
+    align-self: flex-end;
+  }
+}

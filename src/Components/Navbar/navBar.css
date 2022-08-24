@@ -8,7 +8,7 @@ nav {
   bottom: 0px;
   z-index: 1;
   width: 100vw;
-  height: 3rem;
+  height: 2rem;
   background-color: #fff;
   display: flex;
   justify-content: space-evenly;
@@ -33,4 +33,17 @@ a {
 .disabled-nav-link {
   text-decoration: line-through;
   color: rgb(148, 147, 147);
+}
+
+@media screen and (min-width: 750px) {
+  nav {
+    top: 10rem;
+    left: 8rem;
+    width: 20vw;
+    height: 20rem;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
 }

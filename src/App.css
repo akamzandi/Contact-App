@@ -42,3 +42,9 @@ button {
 .edit-button {
   color: darkblue;
 }
+
+/* @media screen and (min-width: 600px) {
+  .App {
+    
+  }
+} */

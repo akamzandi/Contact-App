@@ -22,3 +22,19 @@
   position: -webkit-sticky;
   top: 0;
 }
+
+@media screen and (min-width: 750px) {
+  .contactList-page {
+    /* border: 1px solid red; */
+    width: 60vw;
+    align-self: flex-end;
+    /* padding-right: 15rem; */
+    /* margin-right: 15rem; */
+  }
+
+  .contactList-page h3 {
+    width: 100vw;
+    align-self: flex-end;
+    /* margin-right: 15rem; */
+  }
+}
