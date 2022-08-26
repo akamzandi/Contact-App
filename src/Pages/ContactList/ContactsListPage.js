@@ -1,5 +1,6 @@
-import Contact from "../../Components/Contact/Contact";
 import Select from "react-select";
+import { BiSearchAlt2 } from "react-icons/bi";
+import Contact from "../../Components/Contact/Contact";
 import "./contactsListPage.css";
 
 const options = [
@@ -33,20 +34,35 @@ const ContactsListPage = ({
     }
   };
 
+  const customStyles = {
+    control: (base) => ({
+      ...base,
+      height: "2rem",
+      minHeight: "2rem",
+    }),
+  };
+
   return (
     <div className="contactList-page">
       <div className="contactList-navBar">
         <div className="search-section">
-          <input type="text" placeholder="Search for contacts" />
+          <p>
+            <BiSearchAlt2 />
+          </p>
+          <input type="text" placeholder="Search for contact..." />
         </div>
         <div className="filter-section">
           <p>Tag Filter</p>
           {/* <select>
-            <option value="A">Family</option>
-            <option value="B">Work</option>
-            <option value="C">some long tag</option>
+            <option value="some1">some1</option>
+            <option value="some2">some2</option>
+            <option value="some3">some3</option>
           </select> */}
-          <Select options={options} />
+          <Select
+            options={allTags}
+            styles={customStyles}
+            className="react-selector"
+          />
         </div>
       </div>
       {renderContacts()}
