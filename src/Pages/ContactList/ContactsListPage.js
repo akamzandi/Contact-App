@@ -29,8 +29,17 @@ const ContactsListPage = ({
   return (
     <div className="contactList-page">
       <div className="contactList-navBar">
-        <div className="search-section">Put Search Here</div>
-        <div className="filter-section">Put Filters Here</div>
+        <div className="search-section">
+          <input type="text" placeholder="Search for contacts" />
+        </div>
+        <div className="filter-section">
+          <p>Tag Filter</p>
+          <select>
+            <option value="A">Family</option>
+            <option value="B">Work</option>
+            <option value="C">some long tag</option>
+          </select>
+        </div>
       </div>
       {renderContacts()}
     </div>
