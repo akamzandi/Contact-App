@@ -8,6 +8,7 @@
 }
 
 .addEditContact-page h3 {
+  display: none;
   font-size: 1.4rem;
   /* border: 1px solid green; */
   color: darkorange;

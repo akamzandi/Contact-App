@@ -28,7 +28,10 @@ const ContactsListPage = ({
 
   return (
     <div className="contactList-page">
-      <h3>Contacts List</h3>
+      <div className="contactList-navBar">
+        <div className="search-section">Put Search Here</div>
+        <div className="filter-section">Put Filters Here</div>
+      </div>
       {renderContacts()}
     </div>
   );
