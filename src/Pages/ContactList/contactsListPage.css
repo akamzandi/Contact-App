@@ -42,16 +42,12 @@
   top: 0;
 }
 
-.filter-section,
-.search-section {
-  /* border: 1px solid green; */
-}
-
 .filter-section {
   /* border: 1px solid brown; */
   width: 15rem;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
 }
 

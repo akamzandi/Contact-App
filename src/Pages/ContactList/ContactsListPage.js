@@ -1,5 +1,12 @@
 import Contact from "../../Components/Contact/Contact";
+import Select from "react-select";
 import "./contactsListPage.css";
+
+const options = [
+  { value: "chocolate", label: "Chocolate" },
+  { value: "strawberry", label: "Strawberry" },
+  { value: "vanilla", label: "Vanilla" },
+];
 
 const ContactsListPage = ({
   contacts,
@@ -34,11 +41,12 @@ const ContactsListPage = ({
         </div>
         <div className="filter-section">
           <p>Tag Filter</p>
-          <select>
+          {/* <select>
             <option value="A">Family</option>
             <option value="B">Work</option>
             <option value="C">some long tag</option>
-          </select>
+          </select> */}
+          <Select options={options} />
         </div>
       </div>
       {renderContacts()}
