@@ -1,5 +1,7 @@
-import Select from "react-select";
+import { useRef } from "react";
 import { BiSearchAlt2 } from "react-icons/bi";
+import Select from "react-select";
+
 import Contact from "../../Components/Contact/Contact";
 import "./contactsListPage.css";
 
@@ -15,6 +17,8 @@ const ContactsListPage = ({
   deletContactHandler,
   editContactHandler,
 }) => {
+  const searchInpRef = useRef();
+
   const renderContacts = () => {
     if (contacts != "") {
       return contacts.map((contact) => (
@@ -42,14 +46,27 @@ const ContactsListPage = ({
     }),
   };
 
+  const handleSearchInpChange = (e) => {
+    console.log("search bar: ", e.target.value);
+  };
+
+  const handleSearchIcnClick = () => {
+    searchInpRef.current.focus();
+  };
+
   return (
     <div className="contactList-page">
       <div className="contactList-navBar">
         <div className="search-section">
-          <p>
+          <p onClick={handleSearchIcnClick}>
             <BiSearchAlt2 />
           </p>
-          <input type="text" placeholder="Search for contact..." />
+          <input
+            type="text"
+            placeholder="Search for contact..."
+            onChange={(e) => handleSearchInpChange(e)}
+            ref={searchInpRef}
+          />
         </div>
         <div className="filter-section">
           <p>Tag Filter</p>
