@@ -19,7 +19,6 @@ const ContactsListPage = ({
   searchValue,
   setSearchValue,
 }) => {
-  // const [searchValue, setSearchValue] = useState("");
   const [filteredContacts, setFilteredContacts] = useState(contacts);
   const searchInpRef = useRef();
 
@@ -60,10 +59,6 @@ const ContactsListPage = ({
 
   const handleSearchInpChange = (e) => {
     const { value } = e.target;
-    // let filterResult = [];
-    // filterResult = contacts.filter((contact) =>
-    //   contact.name.toLowerCase().includes(value.toLowerCase())
-    // );
     setSearchValue(value);
     setFilteredContacts(searchForContact(value));
   };

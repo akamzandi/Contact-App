@@ -175,7 +175,8 @@ function App() {
   };
 
   const createOneContact = (contact) => {
-    const updatedContacts = [...contacts, contact];
+    // const updatedContacts = [...contacts, contact];
+    const updatedContacts = [contact, ...contacts];
     localStorage.setItem("contacts", JSON.stringify(updatedContacts));
   };
 
@@ -197,7 +198,8 @@ function App() {
   };
 
   const createOneTag = (tag) => {
-    const updatedTags = [...tags, tag];
+    // const updatedTags = [...tags, tag];
+    const updatedTags = [tag, ...tags];
     localStorage.setItem("tags", JSON.stringify(updatedTags));
   };
 
