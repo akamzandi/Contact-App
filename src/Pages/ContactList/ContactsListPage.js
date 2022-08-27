@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { BiSearchAlt2 } from "react-icons/bi";
 import Select from "react-select";
 
@@ -16,12 +16,16 @@ const ContactsListPage = ({
   allTags,
   deletContactHandler,
   editContactHandler,
+  searchValue,
+  setSearchValue,
 }) => {
+  // const [searchValue, setSearchValue] = useState("");
+  const [filteredContacts, setFilteredContacts] = useState(contacts);
   const searchInpRef = useRef();
 
-  const renderContacts = () => {
-    if (contacts != "") {
-      return contacts.map((contact) => (
+  const renderProperContacts = () => {
+    if (filteredContacts != "") {
+      return filteredContacts.map((contact) => (
         <Contact
           key={contact.id}
           name={contact.name}
@@ -41,18 +45,36 @@ const ContactsListPage = ({
   const customStyles = {
     control: (base) => ({
       ...base,
-      height: "2rem",
-      minHeight: "2rem",
+      height: "1.8rem",
+      minHeight: "1.8rem",
     }),
   };
 
+  const searchForContact = (inp) => {
+    let filterResult = [];
+    filterResult = contacts.filter((contact) =>
+      contact.name.toLowerCase().includes(inp.toLowerCase())
+    );
+    return filterResult;
+  };
+
   const handleSearchInpChange = (e) => {
-    console.log("search bar: ", e.target.value);
+    const { value } = e.target;
+    // let filterResult = [];
+    // filterResult = contacts.filter((contact) =>
+    //   contact.name.toLowerCase().includes(value.toLowerCase())
+    // );
+    setSearchValue(value);
+    setFilteredContacts(searchForContact(value));
   };
 
   const handleSearchIcnClick = () => {
     searchInpRef.current.focus();
   };
+
+  useEffect(() => {
+    setFilteredContacts(searchForContact(searchValue));
+  }, []);
 
   return (
     <div className="contactList-page">
@@ -63,9 +85,11 @@ const ContactsListPage = ({
           </p>
           <input
             type="text"
-            placeholder="Search for contact..."
-            onChange={(e) => handleSearchInpChange(e)}
+            name="searchInp"
+            value={searchValue}
+            placeholder="Search for Contact..."
             ref={searchInpRef}
+            onChange={(e) => handleSearchInpChange(e)}
           />
         </div>
         <div className="filter-section">
@@ -82,7 +106,7 @@ const ContactsListPage = ({
           />
         </div>
       </div>
-      {renderContacts()}
+      {renderProperContacts()}
     </div>
   );
 };
