@@ -26,6 +26,7 @@ a {
 
 .active-link {
   color: darkblue;
+  font-weight: bold;
   border-bottom: 1px solid darkorange;
   padding-bottom: 0.3rem;
 }
