@@ -13,11 +13,11 @@ const TagsPage = ({
   editTagMode,
   handleTagColorChange,
 }) => {
-  const tagNameInputRef = useRef();
+  // const tagNameInputRef = useRef();
 
-  useEffect(() => {
-    tagNameInputRef.current.focus();
-  }, [editTagMode, allTags]);
+  // useEffect(() => {
+  //   tagNameInputRef.current.focus();
+  // }, [editTagMode, allTags]);
 
   const renderTags = () => {
     if (allTags != "") {
@@ -63,7 +63,7 @@ const TagsPage = ({
                 placeholder="Enter tag name"
                 name="label"
                 value={forSubmitTag.label}
-                ref={tagNameInputRef}
+                // ref={tagNameInputRef}
                 onChange={(e) => inputChangeHandlerTag(e)}
               />
             </section>
