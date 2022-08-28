@@ -66,7 +66,11 @@ function App() {
   const [forSubmitTag, setForSubmitTag] = useState();
   const [editedTagId, setEditedTagId] = useState(null);
   const [editTagMode, setEditTagMode] = useState(false);
-  const [searchValue, setSearchValue] = useState("");
+
+  // RELATED TO SEARCH AND FILTER (not implemented)
+  // const [searchValue, setSearchValue] = useState("");
+  // const [filteredContacts, setFilteredContacts] = useState(contacts);
+
   const editContactModeNavigate = useNavigate();
 
   const inputChangeHandlerContact = (e) => {
@@ -309,6 +313,11 @@ function App() {
     getAllTags();
   }, []);
 
+  // RELATED TO SEARCH AND FILTER (not implement)
+  // useEffect(() => {
+  //   setFilteredContacts(contacts);
+  // }, [contacts]);
+
   return (
     <div className="App">
       <Routes>
@@ -324,8 +333,10 @@ function App() {
                 allTags={tags}
                 deletContactHandler={deletContactHandler}
                 editContactHandler={editContactHandler}
-                searchValue={searchValue}
-                setSearchValue={setSearchValue}
+                // searchValue={searchValue}
+                // setSearchValue={setSearchValue}
+                // filteredContacts={filteredContacts}
+                // setFilteredContacts={setFilteredContacts}
               />
             }
           />

@@ -5,12 +5,6 @@ import Select from "react-select";
 import Contact from "../../Components/Contact/Contact";
 import "./contactsListPage.css";
 
-const options = [
-  { value: "chocolate", label: "Chocolate" },
-  { value: "strawberry", label: "Strawberry" },
-  { value: "vanilla", label: "Vanilla" },
-];
-
 const ContactsListPage = ({
   contacts,
   allTags,
@@ -18,13 +12,16 @@ const ContactsListPage = ({
   editContactHandler,
   searchValue,
   setSearchValue,
+  filteredContacts,
+  setFilteredContacts,
 }) => {
-  const [filteredContacts, setFilteredContacts] = useState(contacts);
-  const searchInpRef = useRef();
+  // const searchInpRef = useRef();
 
   const renderProperContacts = () => {
-    if (filteredContacts != "") {
-      return filteredContacts.map((contact) => (
+    // if (filteredContacts != "") {
+    if (contacts != "") {
+      // return filteredContacts.map((contact) => (
+      return contacts.map((contact) => (
         <Contact
           key={contact.id}
           name={contact.name}
@@ -41,39 +38,41 @@ const ContactsListPage = ({
     }
   };
 
-  const customStyles = {
-    control: (base) => ({
-      ...base,
-      height: "1.8rem",
-      minHeight: "1.8rem",
-    }),
-  };
+  // RELATED TO SEARCH AND FILTER (not implement)
+  // const customStyles = {
+  //   control: (base) => ({
+  //     ...base,
+  //     height: "1.8rem",
+  //     minHeight: "1.8rem",
+  //   }),
+  // };
 
-  const searchForContact = (inp) => {
-    let filterResult = [];
-    filterResult = contacts.filter((contact) =>
-      contact.name.toLowerCase().includes(inp.toLowerCase())
-    );
-    return filterResult;
-  };
+  // const searchForContact = (inp) => {
+  //   let filterResult = [];
+  //   filterResult = contacts.filter((contact) =>
+  //     contact.name.toLowerCase().includes(inp.toLowerCase())
+  //   );
+  //   return filterResult;
+  // };
 
-  const handleSearchInpChange = (e) => {
-    const { value } = e.target;
-    setSearchValue(value);
-    setFilteredContacts(searchForContact(value));
-  };
+  // const handleSearchInpChange = (e) => {
+  //   const { value } = e.target;
+  //   setSearchValue(value);
+  //   setFilteredContacts(searchForContact(value));
+  // };
 
-  const handleSearchIcnClick = () => {
-    searchInpRef.current.focus();
-  };
+  // const handleSearchIcnClick = () => {
+  //   searchInpRef.current.focus();
+  // };
 
-  useEffect(() => {
-    setFilteredContacts(searchForContact(searchValue));
-  }, []);
+  // useEffect(() => {
+  //   setFilteredContacts(searchForContact(searchValue));
+  // }, [contacts]);
 
   return (
     <div className="contactList-page">
-      <div className="contactList-navBar">
+      {/* RELATED TO SEARCH AND FILTER (not implemented) */}
+      {/* <div className="contactList-navBar">
         <div className="search-section">
           <p onClick={handleSearchIcnClick}>
             <BiSearchAlt2 />
@@ -89,18 +88,13 @@ const ContactsListPage = ({
         </div>
         <div className="filter-section">
           <p>Tag Filter</p>
-          {/* <select>
-            <option value="some1">some1</option>
-            <option value="some2">some2</option>
-            <option value="some3">some3</option>
-          </select> */}
           <Select
             options={allTags}
             styles={customStyles}
             className="react-selector"
           />
         </div>
-      </div>
+      </div> */}
       {renderProperContacts()}
     </div>
   );
